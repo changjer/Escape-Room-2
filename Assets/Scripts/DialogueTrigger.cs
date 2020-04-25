@@ -3,18 +3,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class DialogueTrigger : MonoBehaviour
-{
+public class DialogueTrigger : MonoBehaviour, IPointerClickHandler
+    {
     public Dialogue dialogue;
 
-    void OnMouseOver()//detect click
-    {
-        if (Input.GetMouseButtonDown(1))//1 is right click
+    public void OnPointerClick(PointerEventData eventData)
         {
+        if (eventData.button == PointerEventData.InputButton.Right)//1 is right click
+            {
             TriggerDialogue();
+            }
         }
-    }
 
     public void TriggerDialogue()//send to dialogue manager
     {

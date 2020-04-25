@@ -9,13 +9,17 @@ public class CameraSwapTrigger : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
         {
-        if (CameraMover.CurrentIndex >= 0 && CameraMover.CurrentIndex <= 3)
+        if (eventData.button == PointerEventData.InputButton.Left)
             {
-            CameraMover.SnapTo(4);
-            }
-        else
-            {
-            CameraMover.SnapTo(0);
+
+            if (CameraMover.CurrentIndex >= 0 && CameraMover.CurrentIndex <= 3)
+                {
+                CameraMover.SnapTo(4);
+                }
+            else
+                {
+                CameraMover.SnapTo(0);
+                }
             }
         }
 
