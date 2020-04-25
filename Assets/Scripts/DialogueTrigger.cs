@@ -11,7 +11,7 @@ public class DialogueTrigger : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
         {
-        if (eventData.button == PointerEventData.InputButton.Right)//1 is right click
+        if (eventData.button == PointerEventData.InputButton.Right)
             {
             TriggerDialogue();
             }

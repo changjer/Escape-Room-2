@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿//moves the camera from loop to loop via clicking on the bathroom door
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;

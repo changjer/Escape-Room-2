@@ -7,7 +7,7 @@ using UnityEngine;
 public class MyGUI : MonoBehaviour
 {
     public MoveCamera CameraMover;
-  
+    public int MoveBackTo;
     public void moveLeft()//iterates the camera left in the main room
     {
         
@@ -63,5 +63,14 @@ public class MyGUI : MonoBehaviour
                 }
             }
         }
-
+    public void moveBack()//sets UI to normal and moves camera back to where it was before moveTrigger was activated, only called after moveTrigger
+        {
+        CameraMover.SnapTo(MoveBackTo);
+        var UICG = GameObject.Find("UIButtons").GetComponent<CanvasGroup>();
+        var BCG = GameObject.Find("BackButton").GetComponent<CanvasGroup>();
+        UICG.alpha = 1;
+        UICG.interactable = true;
+        BCG.alpha = 0;
+        BCG.interactable = false;
+        }
     }

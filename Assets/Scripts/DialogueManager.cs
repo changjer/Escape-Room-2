@@ -13,30 +13,29 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     private bool printing;
     private string sentence;
-    void Start()//makes sure that the dialogue box is not on-screen at the start
+    private bool isZoomed;
+    void Start()//makes sure that the dialogue box and back button is not on-screen at the start
     {
         sentences = new Queue<string>();
         var DialogueCG = GameObject.Find("DialogueBox").GetComponent<CanvasGroup>();
         var UICG = GameObject.Find("UIButtons").GetComponent<CanvasGroup>();
-
-        UICG.alpha=1;
-        UICG.interactable=true;
-        DialogueCG.alpha=0;
-        DialogueCG.interactable=false;
-    }
+        var BCG = GameObject.Find("BackButton").GetComponent<CanvasGroup>();
+        UICG.alpha = 1;
+        UICG.interactable = true;
+        BCG.alpha = 0;
+        BCG.interactable = false;
+        DialogueCG.alpha = 0;
+        DialogueCG.interactable = false;
+        DialogueCG.blocksRaycasts = false;
+        isZoomed = false;
+        }
 
     public void StartDialogue(Dialogue dialogue)//starts a dialogue, bringing up the dialogue box, removing the ui buttons, and calling displaynextsentence
         {
         nameText.text = dialogue.name;
 
         sentences.Clear();
-        var DialogueCG = GameObject.Find("DialogueBox").GetComponent<CanvasGroup>();
-        var UICG = GameObject.Find("UIButtons").GetComponent<CanvasGroup>();
-
-        UICG.alpha = 0;
-        UICG.interactable = false;
-        DialogueCG.alpha = 1;
-        DialogueCG.interactable = true;
+        ShowDB();
         foreach (string sentence in dialogue.sentences)
             {
             sentences.Enqueue(sentence);
@@ -85,14 +84,64 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()//hides dialogue box and brings up ui buttons
         {
-        var DialogueCG = GameObject.Find("DialogueBox").GetComponent<CanvasGroup>();
-        var UICG = GameObject.Find("UIButtons").GetComponent<CanvasGroup>();
-        
-        UICG.alpha=1;
-        UICG.interactable=true;
-        DialogueCG.alpha=0;
-        DialogueCG.interactable=false;
-
+        HideDB();
         }
 
+    void HideDB()//hides the dialogue box and checks isZoomed to see whether to bring up the LR or Back buttons
+        {
+        var DialogueCG = GameObject.Find("DialogueBox").GetComponent<CanvasGroup>();
+        var UICG = GameObject.Find("UIButtons").GetComponent<CanvasGroup>();
+        var BCG = GameObject.Find("BackButton").GetComponent<CanvasGroup>();
+        if (isZoomed)
+            {
+            BCG.alpha = 1;
+            BCG.interactable = true;
+            UICG.alpha = 0;
+            UICG.interactable = false;
+            DialogueCG.alpha = 0;
+            DialogueCG.interactable = false;
+            DialogueCG.blocksRaycasts = false;
+            }
+        else
+            {
+            BCG.alpha = 0;
+            BCG.interactable = false;
+            UICG.alpha = 1;
+            UICG.interactable = true;
+            DialogueCG.alpha = 0;
+            DialogueCG.interactable = false;
+            DialogueCG.blocksRaycasts = false;
+            }
+      
+        }
+
+    void ShowDB()//hides buttons and shows DB, sets isZoomed if the back button is showing
+        {
+        var DialogueCG = GameObject.Find("DialogueBox").GetComponent<CanvasGroup>();
+        var UICG = GameObject.Find("UIButtons").GetComponent<CanvasGroup>();
+        var BCG = GameObject.Find("BackButton").GetComponent<CanvasGroup>();
+
+        if (BCG.interactable == true)
+            {
+            isZoomed = true;
+            UICG.alpha = 0;
+            UICG.interactable = false;
+            BCG.alpha = 0;
+            BCG.interactable = false;
+            DialogueCG.alpha = 1;
+            DialogueCG.interactable = true;
+            DialogueCG.blocksRaycasts = true;
+            }
+        else
+            {
+            isZoomed = false;
+            UICG.alpha = 0;
+            UICG.interactable = false;
+            BCG.alpha = 0;
+            BCG.interactable = false;
+            DialogueCG.alpha = 1;
+            DialogueCG.interactable = true;
+            DialogueCG.blocksRaycasts = true;
+            }
+        }
 }
