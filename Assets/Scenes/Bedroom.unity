@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11b0dad4475dc174abf6ce0e8cefb9c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraMover: {fileID: 0}
+  CameraMover: {fileID: 1998097177}
   moveToPos: 8
 --- !u!1 &146849376
 GameObject:
@@ -320,7 +320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0a751c0923fc3f24f952213735c8a36d, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0a751c0923fc3f24f952213735c8a36d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -336,11 +336,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0a751c0923fc3f24f952213735c8a36d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 19.571245
+      value: 19.571247
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0a751c0923fc3f24f952213735c8a36d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 19.571245
+      value: 19.571249
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0a751c0923fc3f24f952213735c8a36d, type: 3}
       propertyPath: m_LocalScale.z
@@ -556,7 +556,7 @@ Transform:
   - {fileID: 1876960496}
   - {fileID: 181155227}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &262777193
 GameObject:
@@ -751,6 +751,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74d6f64c52155564fbb05fac0792db56, type: 3}
+--- !u!1 &360680014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 360680015}
+  m_Layer: 0
+  m_Name: Camera Pos 9 Toilet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &360680015
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360680014}
+  m_LocalRotation: {x: 0.3360481, y: -0.0044205496, z: 0.0015251935, w: 0.94183326}
+  m_LocalPosition: {x: -2.48, y: 8.3, z: 46.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 515972047}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 39.273003, y: -0.54, z: -0.007}
 --- !u!1 &396790519
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,6 +1016,8 @@ Transform:
   - {fileID: 1354729972}
   - {fileID: 1882047721}
   - {fileID: 1300406954}
+  - {fileID: 360680015}
+  - {fileID: 1883817694}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2129,7 +2161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b282b4ea1453deb41906a9eaf37d6e60, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b282b4ea1453deb41906a9eaf37d6e60, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2280,6 +2312,26 @@ Transform:
   m_Father: {fileID: 515972047}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 16.078001, z: 0}
+--- !u!1 &1297757148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 80009c74748d82047b88c3f400e09c3d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1577007354}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1297757153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297757148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11b0dad4475dc174abf6ce0e8cefb9c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraMover: {fileID: 1998097177}
+  moveToPos: 10
 --- !u!1 &1300406953
 GameObject:
   m_ObjectHideFlags: 0
@@ -2534,6 +2586,26 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1432096340 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 0a751c0923fc3f24f952213735c8a36d,
+    type: 3}
+  m_PrefabInstance: {fileID: 168912228}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1432096345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432096340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11b0dad4475dc174abf6ce0e8cefb9c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraMover: {fileID: 1998097177}
+  moveToPos: 9
 --- !u!1001 &1437595309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3115,7 +3187,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 80009c74748d82047b88c3f400e09c3d, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 80009c74748d82047b88c3f400e09c3d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3140,6 +3212,10 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 80009c74748d82047b88c3f400e09c3d, type: 3}
       propertyPath: m_LocalScale.z
       value: 23.432833
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500000, guid: 80009c74748d82047b88c3f400e09c3d, type: 3}
+      propertyPath: m_Size.z
+      value: 0.58
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80009c74748d82047b88c3f400e09c3d, type: 3}
@@ -4261,6 +4337,36 @@ Transform:
   m_Father: {fileID: 515972047}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 61.878002, z: 0}
+--- !u!1 &1883817693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1883817694}
+  m_Layer: 0
+  m_Name: Camera Pos 10 Bathtub
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1883817694
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883817693}
+  m_LocalRotation: {x: 0.21008348, y: 0.5290109, z: -0.23513164, w: 0.78786135}
+  m_LocalPosition: {x: 12.75, y: 9.76, z: 41.29}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 515972047}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 35.437, y: 64.401, z: -10.482}
 --- !u!1 &1892014400
 GameObject:
   m_ObjectHideFlags: 0
@@ -4843,6 +4949,8 @@ MonoBehaviour:
   - {fileID: 1354729972}
   - {fileID: 1882047721}
   - {fileID: 1300406954}
+  - {fileID: 360680015}
+  - {fileID: 1883817694}
   CurrentIndex: 0
 --- !u!81 &1998097178
 AudioListener:
