@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 
-public class MoveTrigger : MonoBehaviour, IPointerClickHandler
+public class MoveTriggerCupboard : MonoBehaviour, IPointerClickHandler
     {
     public MoveCamera CameraMover;
+   
     public int moveToPos;
     public void OnPointerClick(PointerEventData eventData)
         {
@@ -16,17 +18,21 @@ public class MoveTrigger : MonoBehaviour, IPointerClickHandler
                 {
                 var UICG = GameObject.Find("UIButtons").GetComponent<CanvasGroup>();
                 var BCG = GameObject.Find("BackButton").GetComponent<CanvasGroup>();
-                GameObject.Find("Back").GetComponent<MyGUI>().MoveBackTo = CameraMover.CurrentIndex;
+                if (GameObject.Find("Back").GetComponent<MyGUI>().MoveBackTo == -1)
+                    {
+                    GameObject.Find("Back").GetComponent<MyGUI>().MoveBackTo = CameraMover.CurrentIndex;
+                    }
                 CameraMover.SnapTo(moveToPos);
 
                 BCG.alpha = 1;
                 BCG.interactable = true;
                 UICG.alpha = 0;
                 UICG.interactable = false;
+             
                 }
             else
                 {
-                //call other trigger functions here to activate while zoomed in
+                this.GetComponentInChildren<ChangePos>().SwapPos();
                 }
             }
        
