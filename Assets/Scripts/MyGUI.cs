@@ -67,6 +67,7 @@ public class MyGUI : MonoBehaviour
         {
         CameraMover.SnapTo(MoveBackTo);
         MoveBackTo = -1;
+        GameObject.Find("_GM").GetComponent<EnableColliders>().EnableTaggedColliders();
         var UICG = GameObject.Find("UIButtons").GetComponent<CanvasGroup>();
         var BCG = GameObject.Find("BackButton").GetComponent<CanvasGroup>();
         UICG.alpha = 1;

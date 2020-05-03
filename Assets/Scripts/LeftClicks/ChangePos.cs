@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class ChangePos : MonoBehaviour
-{
+using UnityEngine.EventSystems;
+public class ChangePos : MonoBehaviour, IPointerClickHandler
+    {
     Vector3 InitPos, InitRot;
     public Vector3 ToPos,ToRot;
 
@@ -18,7 +18,12 @@ public class ChangePos : MonoBehaviour
         
         }
 
-    public void SwapPos ()
+    public void OnPointerClick(PointerEventData eventData)
+        {
+        SwapPos();
+        }
+
+        public void SwapPos ()
         {
         if (Set)
             {

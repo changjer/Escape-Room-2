@@ -28,7 +28,8 @@ public class MoveTrigger : MonoBehaviour, IPointerClickHandler
                 BCG.interactable = true;
                 UICG.alpha = 0;
                 UICG.interactable = false;
-              
+                GameObject.Find("_GM").GetComponent<EnableColliders>().EnableTaggedColliders();
+                GetComponent<BoxCollider>().enabled = false;
                 }
             else
                 {

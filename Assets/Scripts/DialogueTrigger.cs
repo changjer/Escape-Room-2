@@ -7,8 +7,8 @@ using UnityEngine.EventSystems;
 
 public class DialogueTrigger : MonoBehaviour, IPointerClickHandler
     {
-    public Dialogue dialogue;
-
+    public Dialogue[] dialogue;
+    public int DialogNum;
     public void OnPointerClick(PointerEventData eventData)
         {
         if (eventData.button == PointerEventData.InputButton.Right)
@@ -19,7 +19,21 @@ public class DialogueTrigger : MonoBehaviour, IPointerClickHandler
 
     public void TriggerDialogue()//send to dialogue manager
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-    
-    }
+        if (DialogNum == -1)
+            {
+            DialogNum = Random.Range(0, dialogue.Length);
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue[DialogNum]);
+            DialogNum = -1;
+            }
+        else
+            {
+
+            FindObjectOfType<DialogueManager>().StartDialogue(dialogue[DialogNum]);
+            }
+
+        }
+    public void SetDialogue(int num)
+        {
+        DialogNum = num;
+        }
 }
