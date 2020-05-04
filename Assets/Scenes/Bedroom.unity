@@ -1593,6 +1593,8 @@ Transform:
   - {fileID: 177644209}
   - {fileID: 1798911144}
   - {fileID: 1608184649}
+  - {fileID: 1612418742}
+  - {fileID: 1715159471}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8034,6 +8036,8 @@ GameObject:
   - component: {fileID: 925037978}
   - component: {fileID: 925037977}
   - component: {fileID: 925037981}
+  - component: {fileID: 925037982}
+  - component: {fileID: 925037983}
   m_Layer: 0
   m_Name: Exit Door Panel
   m_TagString: Untagged
@@ -8132,6 +8136,33 @@ MonoBehaviour:
     sentences:
     - 'You need to place keys in order: 1->2-> 3-> 4. '
   DialogNum: 0
+--- !u!65 &925037982
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925037976}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 0.9999999, z: 1.0000001}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &925037983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925037976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393b1a9193cff3a4080a521bb842485b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraMover: {fileID: 1998097177}
+  moveToPos: 16
 --- !u!1 &970974726
 GameObject:
   m_ObjectHideFlags: 0
@@ -10606,13 +10637,43 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608184648}
-  m_LocalRotation: {x: 0.11878046, y: -0.7183724, z: 0.1266686, w: 0.67363745}
-  m_LocalPosition: {x: 11.02, y: 5.59, z: -10.33}
+  m_LocalRotation: {x: 0.005425612, y: -0.9928359, z: 0.1171255, w: 0.023003336}
+  m_LocalPosition: {x: 11.79, y: 7.97, z: -8.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 515972047}
   m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 20, y: -93.68101, z: 0}
+  m_LocalEulerAnglesHint: {x: 13.463, y: -177.38301, z: -0.317}
+--- !u!1 &1612418741
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1612418742}
+  m_Layer: 0
+  m_Name: Camera Pos 15 Bedroom Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1612418742
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612418741}
+  m_LocalRotation: {x: 0.028621431, y: -0.9684079, z: 0.11370416, w: 0.22008666}
+  m_LocalPosition: {x: -9.72, y: 7.97, z: -17.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 515972047}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 13.463, y: -154.43001, z: -0.317}
 --- !u!1 &1620099641
 GameObject:
   m_ObjectHideFlags: 0
@@ -11329,6 +11390,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1713098042}
   m_CullTransparentMesh: 0
+--- !u!1 &1715159470
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1715159471}
+  m_Layer: 0
+  m_Name: Camera Pos 16 Exit Door Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1715159471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715159470}
+  m_LocalRotation: {x: 0.074134246, y: -0.78371835, z: 0.09084032, w: 0.609949}
+  m_LocalPosition: {x: -15.34, y: 7.97, z: -8.939999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 515972047}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 13.463, y: -104.25201, z: -0.317}
 --- !u!1 &1742783503
 GameObject:
   m_ObjectHideFlags: 0
@@ -12479,6 +12570,8 @@ GameObject:
   - component: {fileID: 1892014402}
   - component: {fileID: 1892014401}
   - component: {fileID: 1892014405}
+  - component: {fileID: 1892014407}
+  - component: {fileID: 1892014406}
   m_Layer: 0
   m_Name: Panel
   m_TagString: Untagged
@@ -12577,6 +12670,33 @@ MonoBehaviour:
     sentences:
     - 'It looks like there is something inside, but the panel is locked. '
   DialogNum: 0
+--- !u!65 &1892014406
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892014400}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 0.9999999, z: 0.99999994}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1892014407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892014400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 393b1a9193cff3a4080a521bb842485b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraMover: {fileID: 1998097177}
+  moveToPos: 15
 --- !u!1 &1905345923
 GameObject:
   m_ObjectHideFlags: 0
@@ -13058,7 +13178,7 @@ GameObject:
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 64
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!114 &1998097177
 MonoBehaviour:
@@ -13087,6 +13207,9 @@ MonoBehaviour:
   - {fileID: 1361970473}
   - {fileID: 177644209}
   - {fileID: 1798911144}
+  - {fileID: 1608184649}
+  - {fileID: 1612418742}
+  - {fileID: 1715159471}
   CurrentIndex: 0
 --- !u!81 &1998097178
 AudioListener:
