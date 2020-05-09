@@ -6,6 +6,7 @@ TagManager:
   tags:
   - InventoryItem
   - Zoomable
+  - Zoomable2
   layers:
   - Default
   - TransparentFX

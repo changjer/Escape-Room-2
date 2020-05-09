@@ -8,6 +8,7 @@ public class MyGUI : MonoBehaviour
 {
     public MoveCamera CameraMover;
     public int MoveBackTo;
+    public int MoveBackTo2;
     public void moveLeft()//iterates the camera left in the main room
     {
         
@@ -74,5 +75,19 @@ public class MyGUI : MonoBehaviour
         UICG.interactable = true;
         BCG.alpha = 0;
         BCG.interactable = false;
+        }
+
+    public void moveBack2()//moves from double zoom to single zoom, keeping previous moveBackto values
+        {
+        CameraMover.SnapTo(MoveBackTo2);
+
+        GameObject.Find("_GM").GetComponent<EnableColliders>().EnableTaggedColliders2();
+        var BCG2 = GameObject.Find("BackButton2").GetComponent<CanvasGroup>();
+        var BCG = GameObject.Find("BackButton").GetComponent<CanvasGroup>();
+        BCG.alpha = 1;
+        BCG.interactable = true;
+        BCG2.alpha = 0;
+        BCG2.interactable = false;
+        BCG2.blocksRaycasts = false;
         }
     }

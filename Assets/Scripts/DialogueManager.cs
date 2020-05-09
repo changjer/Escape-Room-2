@@ -13,21 +13,25 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     private bool printing;
     private string sentence;
-    private bool isZoomed;
+    private bool isZoomed, isZoomed2;
     void Start()//makes sure that the dialogue box and back button is not on-screen at the start
     {
         sentences = new Queue<string>();
         var DialogueCG = GameObject.Find("DialogueBox").GetComponent<CanvasGroup>();
         var UICG = GameObject.Find("UIButtons").GetComponent<CanvasGroup>();
         var BCG = GameObject.Find("BackButton").GetComponent<CanvasGroup>();
+        var BCG2 = GameObject.Find("BackButton2").GetComponent<CanvasGroup>();
         UICG.alpha = 1;
         UICG.interactable = true;
         BCG.alpha = 0;
         BCG.interactable = false;
+        BCG2.alpha = 0;
+        BCG2.interactable = false;
         DialogueCG.alpha = 0;
         DialogueCG.interactable = false;
         DialogueCG.blocksRaycasts = false;
         isZoomed = false;
+        isZoomed2 = false;
         }
 
     public void StartDialogue(Dialogue dialogue)//starts a dialogue, bringing up the dialogue box, removing the ui buttons, and calling displaynextsentence
@@ -92,10 +96,21 @@ public class DialogueManager : MonoBehaviour
         var DialogueCG = GameObject.Find("DialogueBox").GetComponent<CanvasGroup>();
         var UICG = GameObject.Find("UIButtons").GetComponent<CanvasGroup>();
         var BCG = GameObject.Find("BackButton").GetComponent<CanvasGroup>();
+        var BCG2 = GameObject.Find("BackButton2").GetComponent<CanvasGroup>();
         if (isZoomed)
             {
             BCG.alpha = 1;
             BCG.interactable = true;
+            UICG.alpha = 0;
+            UICG.interactable = false;
+            DialogueCG.alpha = 0;
+            DialogueCG.interactable = false;
+            DialogueCG.blocksRaycasts = false;
+            }
+        else if (isZoomed2)
+            {
+            BCG2.alpha = 1;
+            BCG2.interactable = true;
             UICG.alpha = 0;
             UICG.interactable = false;
             DialogueCG.alpha = 0;
@@ -115,12 +130,12 @@ public class DialogueManager : MonoBehaviour
       
         }
 
-    void ShowDB()//hides buttons and shows DB, sets isZoomed if the back button is showing
+    public void ShowDB()//hides buttons and shows DB, sets isZoomed or isZoomed2 if the back buttons are showing
         {
         var DialogueCG = GameObject.Find("DialogueBox").GetComponent<CanvasGroup>();
         var UICG = GameObject.Find("UIButtons").GetComponent<CanvasGroup>();
         var BCG = GameObject.Find("BackButton").GetComponent<CanvasGroup>();
-
+        var BCG2 = GameObject.Find("BackButton2").GetComponent<CanvasGroup>();
         if (BCG.interactable == true)
             {
             isZoomed = true;
@@ -128,6 +143,17 @@ public class DialogueManager : MonoBehaviour
             UICG.interactable = false;
             BCG.alpha = 0;
             BCG.interactable = false;
+            DialogueCG.alpha = 1;
+            DialogueCG.interactable = true;
+            DialogueCG.blocksRaycasts = true;
+            }
+        else if (BCG2.interactable==true)
+            {
+            isZoomed2 = true;
+            UICG.alpha = 0;
+            UICG.interactable = false;
+            BCG2.alpha = 0;
+            BCG2.interactable = false;
             DialogueCG.alpha = 1;
             DialogueCG.interactable = true;
             DialogueCG.blocksRaycasts = true;

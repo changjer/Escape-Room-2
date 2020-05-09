@@ -12,7 +12,7 @@ public class ChangePos : MonoBehaviour, IPointerClickHandler
         {
         InitPos = transform.localPosition;
         InitRot = transform.localRotation.eulerAngles;
-        ;
+      
         
         Set = true;
         
@@ -20,7 +20,10 @@ public class ChangePos : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
         {
-        SwapPos();
+        if (eventData.button == PointerEventData.InputButton.Left)
+            {
+            SwapPos();
+            }
         }
 
         public void SwapPos ()
