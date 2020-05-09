@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿//This function will change the transform of whatever is clicked on to the public values
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;

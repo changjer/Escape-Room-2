@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿//put onto a box collider to create a Check/Reset button
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;

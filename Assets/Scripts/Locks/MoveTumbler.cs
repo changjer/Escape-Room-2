@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿//put onto a box collider to use changeCombo on click
+//create a puzzle lock by setting multiple values in Cylinder to 1 to change more than one at once
+//IMPORTANT: change is positive for up on the tumbler (lower value) and negative for down (higher value)
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;

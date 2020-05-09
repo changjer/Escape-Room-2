@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿//holds the functions for waterTrigger to access, invokes events that cause water and steam to appear when appropriate
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;

@@ -91,7 +91,7 @@ public class DialogueManager : MonoBehaviour
         HideDB();
         }
 
-    void HideDB()//hides the dialogue box and checks isZoomed to see whether to bring up the LR or Back buttons
+    void HideDB()//hides the dialogue box and checks isZoomed and isZoomed2 to see whether to bring up the LR or Back buttons
         {
         var DialogueCG = GameObject.Find("DialogueBox").GetComponent<CanvasGroup>();
         var UICG = GameObject.Find("UIButtons").GetComponent<CanvasGroup>();

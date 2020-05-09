@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿//contains functions for changing, checking, and reseting a combination lock
+
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;

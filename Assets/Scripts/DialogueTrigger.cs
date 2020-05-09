@@ -19,7 +19,7 @@ public class DialogueTrigger : MonoBehaviour, IPointerClickHandler
 
     public void TriggerDialogue()//send to dialogue manager
     {
-        if (DialogNum == -1)
+        if (DialogNum == -1)//random flag to select any dialogue from the array
             {
             DialogNum = Random.Range(0, dialogue.Length);
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue[DialogNum]);
@@ -32,7 +32,7 @@ public class DialogueTrigger : MonoBehaviour, IPointerClickHandler
             }
 
         }
-    public void SetDialogue(int num)
+    public void SetDialogue(int num)//can be access via event to change what dialogue will be said
         {
         DialogNum = num;
         }

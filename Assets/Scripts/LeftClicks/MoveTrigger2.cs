@@ -1,5 +1,5 @@
 ﻿//when clicking on an object with this trigger, will move to the set moveToPos in the CameraMover array and change the ui to have the Back button not the LR buttons
-//
+//this function is used after MoveTrigger when already zoomed
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
