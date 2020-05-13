@@ -2322,6 +2322,23 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1437595309}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &508162874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508162873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecca1270e79b40b8bf22087cf2603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - name: 
+    sentences:
+    - ...Something looks out of place
+  DialogNum: 0
 --- !u!114 &508162875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8669,6 +8686,37 @@ MonoBehaviour:
   inventory: {fileID: 281146476}
   name: Cloth Scrap 2
   description: <Insert Description>
+--- !u!114 &831177762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831177757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecca1270e79b40b8bf22087cf2603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - name: Cloth Scrap
+    sentences:
+    - Looks like part of it is missing.
+  DialogNum: 0
+--- !u!64 &831177763
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 831177757}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300022, guid: 3108062403fb4db45aa9f72e9dd7b443, type: 3}
 --- !u!1 &882754302
 GameObject:
   m_ObjectHideFlags: 0
@@ -10272,6 +10320,7 @@ GameObject:
   - component: {fileID: 1345030085}
   - component: {fileID: 1345030084}
   - component: {fileID: 1345030088}
+  - component: {fileID: 1345030089}
   m_Layer: 0
   m_Name: Key 3 (inside nightstand)
   m_TagString: InventoryItem
@@ -10368,6 +10417,23 @@ MonoBehaviour:
   inventory: {fileID: 281146476}
   name: Key 3
   description: <Insert Description>
+--- !u!114 &1345030089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345030083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecca1270e79b40b8bf22087cf2603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - name: Key
+    sentences:
+    - I wonder what this is for.
+  DialogNum: 0
 --- !u!1 &1354729971
 GameObject:
   m_ObjectHideFlags: 0
@@ -11682,6 +11748,43 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!1 &1626677032 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100018, guid: 0882de763878e434883f657c2758a22b,
+    type: 3}
+  m_PrefabInstance: {fileID: 723017166}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1626677033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626677032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecca1270e79b40b8bf22087cf2603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - name: 
+    sentences:
+    - It doesn't seem like it's turning on.
+  DialogNum: 0
+--- !u!64 &1626677034
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626677032}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &1631709693
 GameObject:
   m_ObjectHideFlags: 0
@@ -12066,6 +12169,23 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.7, z: 0.75}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1671529838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1671529835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecca1270e79b40b8bf22087cf2603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - name: 
+    sentences:
+    - Let's see if we can open this nightstand.
+  DialogNum: 0
 --- !u!1 &1674788595
 GameObject:
   m_ObjectHideFlags: 0
@@ -12608,6 +12728,7 @@ GameObject:
   - component: {fileID: 1750003801}
   - component: {fileID: 1750003800}
   - component: {fileID: 1750003804}
+  - component: {fileID: 1750003805}
   m_Layer: 0
   m_Name: Door Knob
   m_TagString: InventoryItem
@@ -12704,6 +12825,23 @@ MonoBehaviour:
   inventory: {fileID: 281146476}
   name: Door Knob
   description: <Insert Description>
+--- !u!114 &1750003805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1750003799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecca1270e79b40b8bf22087cf2603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - name: Door Knob
+    sentences:
+    - That's odd. I wonder what it's doing here.
+  DialogNum: 0
 --- !u!1 &1772690435
 GameObject:
   m_ObjectHideFlags: 0
