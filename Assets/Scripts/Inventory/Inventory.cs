@@ -54,4 +54,15 @@ public class Inventory : MonoBehaviour
         inventorySlot[index] = inventoryPanel.transform.GetChild(index).gameObject;
         Debug.Log("Removing Item");
     }
+    public bool InInventory(string itemName){
+        
+        for(int i = 0; i < inventorySlot.Length; i++)
+        {
+            if(inventorySlot[i].GetComponent<InventoryItem>().name == itemName)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }
