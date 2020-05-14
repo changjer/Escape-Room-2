@@ -23,7 +23,7 @@ public class Inventory : MonoBehaviour
         for(int i = 0; i < _inventorySize; i++)
         {
             inventorySlot[i] = inventoryPanel.transform.GetChild(i).gameObject;
-            Debug.Log("Initialize inventorySlot[" + i + "]: " + inventorySlot[i]);
+            //Debug.Log("Initialize inventorySlot[" + i + "]: " + inventorySlot[i]);
         }
     }
     public void AddItem(GameObject item)
@@ -38,21 +38,21 @@ public class Inventory : MonoBehaviour
                 inventorySlot[i] = item;
                 item.SetActive(false); //removes item from scene
                 //inventorySlot[i]..text = item.GetComponent<Item>().name;
-                Debug.Log(item.name + " was added to inventory");
+                //Debug.Log(item.name + " was added to inventory");
                 itemAdded = true;
                 break;
             }
         }
         if(itemAdded == false)
         {
-            Debug.Log("Inventory Full - Item Not Added");
+            //Debug.Log("Inventory Full - Item Not Added");
         }
     }
     public void RemoveItem(int index)
     {
         inventorySlot[index].gameObject.SetActive(true);
         inventorySlot[index] = inventoryPanel.transform.GetChild(index).gameObject;
-        Debug.Log("Removing Item");
+        //Debug.Log("Removing Item");
     }
     public bool InInventory(string itemName){
         

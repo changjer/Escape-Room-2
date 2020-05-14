@@ -10,13 +10,13 @@ public class InventoryItem : MonoBehaviour
     //public Sprite icon;
     void Start()
     {
-        Print();
+       //Print();
     }
     void OnMouseOver()
     {
         if(Input.GetMouseButtonDown(0))
         {
-            Debug.Log("User Selected Item: " + this.gameObject.GetComponent<InventoryItem>().name);
+            //Debug.Log("User Selected Item: " + this.gameObject.GetComponent<InventoryItem>().name);
             inventory.gameObject.GetComponent<Inventory>().AddItem(this.gameObject); 
         }   
     }

@@ -16,16 +16,13 @@ public class Lamp : MonoBehaviour {
     public bool TurnOn;
 
     public GameObject inventory;
+   
 	void OnMouseOver()
     {
         if(Input.GetMouseButtonDown(0) && inventory.gameObject.GetComponent<Inventory>().InInventory("Key 3"))
         {
             TurnOn = !TurnOn;
         }
-        else
-        {
-            Debug.Log("Need Key 3 to Turn On");
-        }   
     }
 	// Update is called once per frame
 	void Update () {
