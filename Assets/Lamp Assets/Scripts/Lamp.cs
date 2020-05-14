@@ -14,17 +14,15 @@ public class Lamp : MonoBehaviour {
     public GameObject DomeOn;
 
     public bool TurnOn;
-    
-    
-
-	// Use this for initialization
-	void Start () {
+	void OnMouseOver()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            TurnOn = !TurnOn;
+        }   
     }
-	
 	// Update is called once per frame
 	void Update () {
-        
-
 
         if (TurnOn== true)
         {
