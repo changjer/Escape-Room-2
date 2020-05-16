@@ -1,4 +1,4 @@
-﻿//Checks the name of the object and sets cold or hot on the parent to turn water and steam off and on
+﻿//Computer input fields show up when clicked in zoomed view.  
 
 using System.Collections;
 using System.Collections.Generic;
@@ -10,13 +10,13 @@ public class ComputerTrigger : MonoBehaviour, IPointerClickHandler
     
     public void OnPointerClick(PointerEventData eventData)
     {
-        UnityEngine.Debug.Log("reached");
         var CIF = GameObject.Find("ComputerInputField").GetComponent<CanvasGroup>();
         var BCG = GameObject.Find("BackButton").GetComponent<CanvasGroup>();
         if (BCG.interactable == true)
         {
             CIF.alpha = 1;
             CIF.interactable = true;
+            CIF.blocksRaycasts = true;
         }
 
     }

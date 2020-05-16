@@ -78,7 +78,8 @@ public class MyGUI : MonoBehaviour
         BCG.interactable = false;
         CIF.alpha = 0;
         CIF.interactable = false;
-        }
+        CIF.blocksRaycasts = false;
+    }
 
     public void moveBack2()//moves from double zoom to single zoom, keeping previous moveBackto values
         {

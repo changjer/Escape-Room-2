@@ -16206,7 +16206,7 @@ GameObject:
   - component: {fileID: 1945980624}
   - component: {fileID: 1945980627}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: ComputerInputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
