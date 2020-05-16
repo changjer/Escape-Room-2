@@ -14610,20 +14610,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 1.2, z: 0.4}
   m_Center: {x: 0, y: 0.8, z: 0}
---- !u!114 &1591445872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591445869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11b0dad4475dc174abf6ce0e8cefb9c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CameraMover: {fileID: 1998097177}
-  moveToPos: 14
 --- !u!114 &1591445873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17725,7 +17711,7 @@ GameObject:
   - component: {fileID: 1945980624}
   - component: {fileID: 1945980627}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: ComputerInputField
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
