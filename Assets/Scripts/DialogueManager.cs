@@ -3,6 +3,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
@@ -26,18 +27,18 @@ public class DialogueManager : MonoBehaviour
         BCG.alpha = 0;
         BCG.interactable = false;
         BCG2.alpha = 0;
-        BCG2.interactable = false;
+        BCG2.interactable = false; 
         DialogueCG.alpha = 0;
         DialogueCG.interactable = false;
         DialogueCG.blocksRaycasts = false;
         isZoomed = false;
         isZoomed2 = false;
-        }
+    }
 
     public void StartDialogue(Dialogue dialogue)//starts a dialogue, bringing up the dialogue box, removing the ui buttons, and calling displaynextsentence
         {
         nameText.text = dialogue.name;
-
+        UnityEngine.Debug.Log(nameText.text);
         sentences.Clear();
         ShowDB();
         foreach (string sentence in dialogue.sentences)
@@ -97,6 +98,7 @@ public class DialogueManager : MonoBehaviour
         var UICG = GameObject.Find("UIButtons").GetComponent<CanvasGroup>();
         var BCG = GameObject.Find("BackButton").GetComponent<CanvasGroup>();
         var BCG2 = GameObject.Find("BackButton2").GetComponent<CanvasGroup>();
+
         if (isZoomed)
             {
             BCG.alpha = 1;
@@ -106,7 +108,7 @@ public class DialogueManager : MonoBehaviour
             DialogueCG.alpha = 0;
             DialogueCG.interactable = false;
             DialogueCG.blocksRaycasts = false;
-            }
+        }
         else if (isZoomed2)
             {
             BCG2.alpha = 1;
@@ -116,7 +118,7 @@ public class DialogueManager : MonoBehaviour
             DialogueCG.alpha = 0;
             DialogueCG.interactable = false;
             DialogueCG.blocksRaycasts = false;
-            }
+        }
         else
             {
             BCG.alpha = 0;
@@ -126,7 +128,7 @@ public class DialogueManager : MonoBehaviour
             DialogueCG.alpha = 0;
             DialogueCG.interactable = false;
             DialogueCG.blocksRaycasts = false;
-            }
+        }
       
         }
 
@@ -136,6 +138,7 @@ public class DialogueManager : MonoBehaviour
         var UICG = GameObject.Find("UIButtons").GetComponent<CanvasGroup>();
         var BCG = GameObject.Find("BackButton").GetComponent<CanvasGroup>();
         var BCG2 = GameObject.Find("BackButton2").GetComponent<CanvasGroup>();
+
         if (BCG.interactable == true)
             {
             isZoomed = true;
@@ -146,7 +149,7 @@ public class DialogueManager : MonoBehaviour
             DialogueCG.alpha = 1;
             DialogueCG.interactable = true;
             DialogueCG.blocksRaycasts = true;
-            }
+        }
         else if (BCG2.interactable==true)
             {
             isZoomed2 = true;
@@ -157,7 +160,7 @@ public class DialogueManager : MonoBehaviour
             DialogueCG.alpha = 1;
             DialogueCG.interactable = true;
             DialogueCG.blocksRaycasts = true;
-            }
+        }
         else
             {
             isZoomed = false;
@@ -168,6 +171,6 @@ public class DialogueManager : MonoBehaviour
             DialogueCG.alpha = 1;
             DialogueCG.interactable = true;
             DialogueCG.blocksRaycasts = true;
-            }
+        }
         }
 }
