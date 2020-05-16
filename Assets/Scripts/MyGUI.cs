@@ -71,13 +71,14 @@ public class MyGUI : MonoBehaviour
         GameObject.Find("_GM").GetComponent<EnableColliders>().EnableTaggedColliders();
         var UICG = GameObject.Find("UIButtons").GetComponent<CanvasGroup>();
         var BCG = GameObject.Find("BackButton").GetComponent<CanvasGroup>();
-        var CIF = GameObject.Find("ComputerInputField").GetComponent<CanvasGroup>();
+        var CIF = GameObject.Find("InputField").GetComponent<CanvasGroup>();
         UICG.alpha = 1;
         UICG.interactable = true;
         BCG.alpha = 0;
         BCG.interactable = false;
         CIF.alpha = 0;
         CIF.interactable = false;
+        CIF.blocksRaycasts = false;
         }
 
     public void moveBack2()//moves from double zoom to single zoom, keeping previous moveBackto values

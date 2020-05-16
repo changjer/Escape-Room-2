@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.Events;
 public class Inventory : MonoBehaviour
 {
     public GameObject inventory;
     public GameObject inventoryPanel;
     public GameObject[] inventorySlot;
+    public UnityEvent PlayRummage;
     private static int _inventorySize = 6;
 
     void Start()
@@ -34,7 +35,8 @@ public class Inventory : MonoBehaviour
         {
             //need to check that slot does not contain an item
             if(inventorySlot[i].gameObject.tag != "InventoryItem")
-            {   
+            {
+                PlayRummage.Invoke();
                 inventorySlot[i] = item;
                 item.SetActive(false); //removes item from scene
                 //inventorySlot[i]..text = item.GetComponent<Item>().name;
@@ -52,8 +54,9 @@ public class Inventory : MonoBehaviour
     {
         inventorySlot[index].gameObject.SetActive(true);
         inventorySlot[index] = inventoryPanel.transform.GetChild(index).gameObject;
+        PlayRummage.Invoke();
         //Debug.Log("Removing Item");
-    }
+        }
     public bool InInventory(string itemName){
         
         for(int i = 0; i < inventorySlot.Length; i++)

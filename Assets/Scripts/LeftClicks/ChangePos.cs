@@ -4,11 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Events;
 public class ChangePos : MonoBehaviour, IPointerClickHandler
     {
     Vector3 InitPos, InitRot;
     public Vector3 ToPos,ToRot;
-
+    public UnityEvent open, close;
     bool Set;
     void Start()
         {
@@ -36,12 +37,14 @@ public class ChangePos : MonoBehaviour, IPointerClickHandler
             transform.localPosition = ToPos;
             transform.localRotation = Quaternion.Euler(ToRot);
             Set = false;
+            open.Invoke();
             }
         else
             {
             transform.localPosition = InitPos;
             transform.localRotation = Quaternion.Euler(InitRot);
             Set = true;
+            close.Invoke();
             }
         }
 }

@@ -9,6 +9,7 @@ using UnityEngine.Events;
 public class MoveTumbler : MonoBehaviour, IPointerClickHandler
     {
     public int[] Cylinder, change;
+    public UnityEvent turn;
     public void OnPointerClick(PointerEventData eventData)
         {
         if (eventData.button == PointerEventData.InputButton.Left)
@@ -18,6 +19,7 @@ public class MoveTumbler : MonoBehaviour, IPointerClickHandler
                 if (Cylinder[i] != 0)
                     {
                     transform.parent.GetComponent<LockedScript>().changeCombo(i, change[i]);
+                    turn.Invoke();
                     }
                 
                 

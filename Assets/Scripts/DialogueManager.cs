@@ -6,9 +6,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 public class DialogueManager : MonoBehaviour
 {
-
+    public UnityEvent DialogueBeep;
     public Text nameText;
     public Text dialogueText;
     private Queue<string> sentences;
@@ -77,8 +78,12 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text = "";
             foreach (char character in phrase.ToCharArray())
                 {
+            if (character != ' ')
+                {
+                DialogueBeep.Invoke();
+                }
                 dialogueText.text += character;
-                for (int i = 0; i < 50; i++)
+                for (int i = 0; i < 30; i++)
                     {
                     yield return null;
                     }

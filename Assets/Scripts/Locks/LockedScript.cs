@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class LockedScript : MonoBehaviour
 {
     public int[] combination,key;
-    public UnityEvent Unlock;
+    public UnityEvent Unlock, Reset;
     public GameObject[] Cylinders;
     public GameObject dialogue;
     
@@ -42,6 +42,7 @@ public class LockedScript : MonoBehaviour
         }
     public void ResetLock()
         {
+        Reset.Invoke();
         foreach (GameObject cylinder in Cylinders)
             {
             cylinder.transform.localEulerAngles = new Vector3(90, 0, 0);
