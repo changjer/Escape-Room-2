@@ -71,7 +71,7 @@ public class MyGUI : MonoBehaviour
         GameObject.Find("_GM").GetComponent<EnableColliders>().EnableTaggedColliders();
         var UICG = GameObject.Find("UIButtons").GetComponent<CanvasGroup>();
         var BCG = GameObject.Find("BackButton").GetComponent<CanvasGroup>();
-        var CIF = GameObject.Find("InputField").GetComponent<CanvasGroup>();
+        var CIF = GameObject.Find("ComputerInputField").GetComponent<CanvasGroup>();
         UICG.alpha = 1;
         UICG.interactable = true;
         BCG.alpha = 0;
