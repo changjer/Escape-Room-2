@@ -19,7 +19,8 @@ public class MoveTrigger2 : MonoBehaviour, IPointerClickHandler
                 {
                 var BCG = GameObject.Find("BackButton").GetComponent<CanvasGroup>();
                 var BCG2 = GameObject.Find("BackButton2").GetComponent<CanvasGroup>();
-               
+                var CIF = GameObject.Find("ComputerInputField").GetComponent<CanvasGroup>();
+
                 GameObject.Find("Back2").GetComponent<MyGUI>().MoveBackTo2 = CameraMover.CurrentIndex;
 
                 CameraMover.SnapTo(moveToPos);
@@ -31,7 +32,10 @@ public class MoveTrigger2 : MonoBehaviour, IPointerClickHandler
                 BCG.interactable = false;
                 GameObject.Find("_GM").GetComponent<EnableColliders>().EnableTaggedColliders2();
                 GetComponent<BoxCollider>().enabled = false;
-                }
+                CIF.alpha = 0;
+                CIF.interactable = false;
+                CIF.blocksRaycasts = false;
+            }
             else
                 {
                 //do nothing
