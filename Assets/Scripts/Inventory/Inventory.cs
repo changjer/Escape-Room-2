@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     public GameObject inventoryPanel;
     public GameObject[] inventorySlot;
     public UnityEvent PlayRummage;
+    private Image[] inventoryImage;
     private static int _inventorySize = 6;
 
     void Start()
@@ -20,10 +21,12 @@ public class Inventory : MonoBehaviour
     public void InitializeInventory()
     {
         inventorySlot = new GameObject[_inventorySize];
+        inventoryImage = new Image[_inventorySize];
         
         for(int i = 0; i < _inventorySize; i++)
         {
             inventorySlot[i] = inventoryPanel.transform.GetChild(i).gameObject;
+            inventoryImage[i] = inventorySlot[i].transform.GetChild(1).GetComponent<Image>();
             //Debug.Log("Initialize inventorySlot[" + i + "]: " + inventorySlot[i]);
         }
     }
@@ -38,6 +41,7 @@ public class Inventory : MonoBehaviour
             {
                 PlayRummage.Invoke();
                 inventorySlot[i] = item;
+                inventoryImage[i].sprite = item.GetComponent<InventoryItem>().icon;
                 item.SetActive(false); //removes item from scene
                 //inventorySlot[i]..text = item.GetComponent<Item>().name;
                 //Debug.Log(item.name + " was added to inventory");
@@ -54,6 +58,7 @@ public class Inventory : MonoBehaviour
     {
         inventorySlot[index].gameObject.SetActive(true);
         inventorySlot[index] = inventoryPanel.transform.GetChild(index).gameObject;
+        inventoryImage[index].sprite = null;
         PlayRummage.Invoke();
         //Debug.Log("Removing Item");
         }
@@ -61,7 +66,7 @@ public class Inventory : MonoBehaviour
         
         for(int i = 0; i < inventorySlot.Length; i++)
         {
-            if(inventorySlot[i].GetComponent<InventoryItem>().name == itemName)
+            if(inventorySlot[i].gameObject.tag == "InventoryItem" && inventorySlot[i].GetComponent<InventoryItem>().name == itemName)
             {
                 return true;
             }

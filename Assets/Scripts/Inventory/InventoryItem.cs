@@ -7,7 +7,7 @@ public class InventoryItem : MonoBehaviour
     public Inventory inventory;
     public new string name;
     public string description;
-    //public Sprite icon;
+    public Sprite icon;
     void Start()
     {
        //Print();
