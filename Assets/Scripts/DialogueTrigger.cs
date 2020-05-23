@@ -19,6 +19,10 @@ public class DialogueTrigger : MonoBehaviour, IPointerClickHandler
 
     public void TriggerDialogue()//send to dialogue manager
     {
+        if (DialogNum == -2)
+            {
+            return;
+            }
         if (DialogNum == -1)//random flag to select any dialogue from the array
             {
             DialogNum = Random.Range(0, dialogue.Length);

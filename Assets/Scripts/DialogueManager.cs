@@ -40,6 +40,7 @@ public class DialogueManager : MonoBehaviour
         {
         nameText.text = dialogue.name;
         UnityEngine.Debug.Log(nameText.text);
+        var Inventory = GameObject.Find("Inventory").GetComponent<GraphicRaycaster>().enabled = false;
         sentences.Clear();
         ShowDB();
         foreach (string sentence in dialogue.sentences)
@@ -94,6 +95,7 @@ public class DialogueManager : MonoBehaviour
 
     void EndDialogue()//hides dialogue box and brings up ui buttons
         {
+        var Inventory = GameObject.Find("Inventory").GetComponent<GraphicRaycaster>().enabled = true;
         HideDB();
         }
 
