@@ -122,7 +122,10 @@ public class Inventory : MonoBehaviour
     }
     public void RemoveItem(int index)
     {
-       
+        if (index == ActiveItemIndex)
+            {
+            DeselectItem();
+            }
         inventorySlot[index] = inventoryPanel.transform.GetChild(index).gameObject;
         inventorySlot[index].GetComponent<DialogueTrigger>().DialogNum = -2;
         inventoryImage[index].sprite = Background;
@@ -137,7 +140,7 @@ public class Inventory : MonoBehaviour
             {
             RemoveItem(index);
             RemoveItem(ActiveItemIndex);
-            DeselectItem();
+           
             AddItem(CombinedItems[0]);
             }
         }
@@ -163,9 +166,13 @@ public class Inventory : MonoBehaviour
         }
     public void DeselectItem()
         {
-        ActiveItem = "";
-        SelectSlot[ActiveItemIndex].gameObject.SetActive(false);
-        ActiveItemIndex = -1;
+        if (ActiveItemIndex != -1)
+            {
+
+            ActiveItem = "";
+            SelectSlot[ActiveItemIndex].gameObject.SetActive(false);
+            ActiveItemIndex = -1;
+            }
 
         }
     public bool InInventory(string itemName){
