@@ -3,7 +3,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class MyGUI : MonoBehaviour
 {
     public MoveCamera CameraMover;
@@ -93,5 +93,10 @@ public class MyGUI : MonoBehaviour
         BCG2.alpha = 0;
         BCG2.interactable = false;
         BCG2.blocksRaycasts = false;
+        }
+
+    public void ToStartMenu()
+        {
+        SceneManager.LoadScene("StartMenu");
         }
     }
