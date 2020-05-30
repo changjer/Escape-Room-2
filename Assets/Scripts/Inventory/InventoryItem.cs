@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-public class InventoryItem : MonoBehaviour
+using UnityEngine.EventSystems;
+public class InventoryItem : MonoBehaviour, IPointerClickHandler
 {
     public Inventory inventory;
     public bool ItemRequired;
@@ -11,14 +12,12 @@ public class InventoryItem : MonoBehaviour
     public string description;
     public Sprite icon;
     public UnityEvent Pass, Fail;
-    void Start()
-    {
-       //Print();
-    }
-    void OnMouseOver()
-    {
-        if(Input.GetMouseButtonDown(0))
+
+    public void OnPointerClick(PointerEventData eventData)
         {
+        if (eventData.button == PointerEventData.InputButton.Left)
+            {
+
             if (ItemRequired)
                 {
                 if (inventory.ActiveItem == ItemRequiredName)
@@ -32,11 +31,9 @@ public class InventoryItem : MonoBehaviour
                     }
                 }
             //Debug.Log("User Selected Item: " + this.gameObject.GetComponent<InventoryItem>().name);
-            inventory.gameObject.GetComponent<Inventory>().AddItem(this.gameObject); 
+            inventory.gameObject.GetComponent<Inventory>().AddItem(this.gameObject);
+            }
         }   
     }
-    public void Print()
-    {
-        Debug.Log(this.name + "[" + this.description + "] has been created");
-    }
-}
+   
+

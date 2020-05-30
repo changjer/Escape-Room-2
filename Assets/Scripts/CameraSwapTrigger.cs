@@ -7,19 +7,40 @@ using UnityEngine.Events;
 public class CameraSwapTrigger : MonoBehaviour, IPointerClickHandler
 {
     public MoveCamera CameraMover;
-    public UnityEvent RoomChange;
+    public GameObject Dk;
+    public UnityEvent RoomChange,Unlock,Fail;
+    public Inventory inventory;
+    private bool DoorOpen = false;
     public void OnPointerClick(PointerEventData eventData)
         {
         if (eventData.button == PointerEventData.InputButton.Left)
             {
-            RoomChange.Invoke();
-            if (CameraMover.CurrentIndex >= 0 && CameraMover.CurrentIndex <= 3)
+            if (DoorOpen)
                 {
-                CameraMover.SnapTo(4);
+
+                RoomChange.Invoke();
+                if (CameraMover.CurrentIndex >= 0 && CameraMover.CurrentIndex <= 3)
+                    {
+                    CameraMover.SnapTo(4);
+                    }
+                else
+                    {
+                    CameraMover.SnapTo(0);
+                    }
                 }
             else
                 {
-                CameraMover.SnapTo(0);
+                if (inventory.ActiveItem == "Door Knob")
+                    {
+                    DoorOpen = true;
+                    Dk.SetActive(true);
+                    Unlock.Invoke();
+                    inventory.RemoveItem(inventory.ActiveItemIndex);
+                    }
+                else
+                    {
+                    Fail.Invoke();
+                    }
                 }
             }
         }

@@ -143,6 +143,13 @@ public class Inventory : MonoBehaviour
            
             AddItem(CombinedItems[0]);
             }
+        if ((name1 == "Cloth Scrap 1" && name2 == "Cloth Scrap 2") || (name1 == "Cloth Scrap 2" && name2 == "Cloth Scrap 1"))
+            {
+            RemoveItem(index);
+            RemoveItem(ActiveItemIndex);
+
+            AddItem(CombinedItems[4]);
+            }
         }
     public void SelectItem(int index)
         {
