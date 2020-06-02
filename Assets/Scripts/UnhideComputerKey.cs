@@ -19,6 +19,8 @@ public class UnhideComputerKey : MonoBehaviour
     
     public void Unhide(GameObject obj)
     {
+        //GameObject go = GameObject.Find("Panel Door");
+        //var pd = GameObject.Find("Panel Door");
         enteredPW = userInput.GetComponent<Text>().text;
         //Debug.Log(enteredPW);
         if (unhideOnce == false)
@@ -26,6 +28,8 @@ public class UnhideComputerKey : MonoBehaviour
             if (enteredPW == "5418")
             {
                 obj.SetActive(true);
+                //pd.SetActive(true);
+                //go.SetActive(true);
                 unhideOnce = true;
                 verificationMessage.GetComponent<Text>().text = correctPasswordMessage;
             }
@@ -37,5 +41,5 @@ public class UnhideComputerKey : MonoBehaviour
        
         
     }
-    
+
 }
