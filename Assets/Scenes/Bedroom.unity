@@ -2739,7 +2739,7 @@ MonoBehaviour:
   ItemRequiredName: 
   name: Pencil
   description: <Insert Description>
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 6a587030d3641ee4dae993d9ebe5c351, type: 3}
   Pass:
     m_PersistentCalls:
       m_Calls: []
@@ -5654,6 +5654,100 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 583284808}
   m_CullTransparentMesh: 0
+--- !u!1 &590976843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 590976844}
+  - component: {fileID: 590976847}
+  - component: {fileID: 590976846}
+  - component: {fileID: 590976845}
+  m_Layer: 0
+  m_Name: NotepadWriting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &590976844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590976843}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.51, z: 0.001}
+  m_LocalScale: {x: 0.099841885, y: 0.52313447, z: 0.099393845}
+  m_Children: []
+  m_Father: {fileID: 1654283677}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &590976845
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590976843}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &590976846
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590976843}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 49b90a32e5df9c645ac8fbf7eaacd2a2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &590976847
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590976843}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &593936927
 GameObject:
   m_ObjectHideFlags: 0
@@ -12772,6 +12866,54 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.05, y: 0.04, z: 0.05}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &727315824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 727315825}
+  - component: {fileID: 727315826}
+  m_Layer: 0
+  m_Name: RevealNotepadDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &727315825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727315824}
+  m_LocalRotation: {x: -0, y: 0.7043895, z: -0, w: 0.70981365}
+  m_LocalPosition: {x: -19.060242, y: -13.492935, z: 19.936373}
+  m_LocalScale: {x: 3.5387714, y: 19.834034, z: 6.0666976}
+  m_Children: []
+  m_Father: {fileID: 1654283677}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &727315826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727315824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecca1270e79b40b8bf22087cf2603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - name: Player
+    sentences:
+    - Now I can see what it said!
+  DialogNum: 0
 --- !u!1 &729333031
 GameObject:
   m_ObjectHideFlags: 0
@@ -14186,6 +14328,54 @@ MonoBehaviour:
   verificationMessage: {fileID: 219949691}
   wrongPasswordMessage: Wrong password. Try again!
   correctPasswordMessage: Key unlocked! Check the panel by the front door!
+--- !u!1 &894743138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 894743139}
+  - component: {fileID: 894743140}
+  m_Layer: 0
+  m_Name: 'MissingPencilDialogue '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &894743139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894743138}
+  m_LocalRotation: {x: -0, y: 0.7043895, z: -0, w: 0.70981365}
+  m_LocalPosition: {x: -19.060242, y: -13.492935, z: 19.936373}
+  m_LocalScale: {x: 3.5387714, y: 19.834034, z: 6.0666976}
+  m_Children: []
+  m_Father: {fileID: 1654283677}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &894743140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 894743138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecca1270e79b40b8bf22087cf2603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - name: Player
+    sentences:
+    - 'If only I could find a pencil around here! '
+  DialogNum: 0
 --- !u!1 &896751788
 GameObject:
   m_ObjectHideFlags: 0
@@ -14802,7 +14992,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 973930097}
   m_LocalRotation: {x: -0, y: 0.7906651, z: -0.61224896, w: 0}
-  m_LocalPosition: {x: 8.07, y: 8.21, z: -16.46}
+  m_LocalPosition: {x: 7.24, y: 4.29, z: -17.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 515972047}
@@ -18756,6 +18946,64 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1476849899}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1480286029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1480286030}
+  - component: {fileID: 1480286031}
+  m_Layer: 0
+  m_Name: NotepadParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1480286030
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480286029}
+  m_LocalRotation: {x: -0.5037649, y: 0.49620658, z: 0.49620646, w: 0.5037649}
+  m_LocalPosition: {x: 0.96, y: -30.5, z: -4.22}
+  m_LocalScale: {x: 11.296334, y: 21.416986, z: 71.371925}
+  m_Children:
+  - {fileID: 2009040361}
+  m_Father: {fileID: 1654283677}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1480286031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480286029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1a91012c009abd4282b4102452ee1b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Reveal:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 590976843}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1515515936
 GameObject:
   m_ObjectHideFlags: 0
@@ -20217,9 +20465,10 @@ GameObject:
   - component: {fileID: 1654283675}
   - component: {fileID: 1654283674}
   - component: {fileID: 1654283679}
+  - component: {fileID: 1654283678}
   - component: {fileID: 1654283680}
   m_Layer: 0
-  m_Name: Notedpad
+  m_Name: Notepad
   m_TagString: InventoryItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20295,10 +20544,67 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.74, y: 1.84, z: -41.94}
   m_LocalScale: {x: 1.0939, y: 0.32832, z: 2.0746}
-  m_Children: []
+  m_Children:
+  - {fileID: 894743139}
+  - {fileID: 727315825}
+  - {fileID: 1480286030}
+  - {fileID: 590976844}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1654283678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654283673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6708903abb3140b4497931d367bd503e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notepadWriting: {fileID: 590976843}
+  Reveal:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1654283679}
+        m_MethodName: SetDialogue
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 727315826}
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  Fail:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 894743140}
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  inventory: {fileID: 281146476}
 --- !u!114 &1654283679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23680,6 +23986,16 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4820851769206954926, guid: 89dd74c61103b7644ab2dd9d26606ea0,
+        type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 5518466ac73c3b94e8f1765c6c455927, type: 3}
+    - target: {fileID: 4820851769206954926, guid: 89dd74c61103b7644ab2dd9d26606ea0,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4820851769216218190, guid: 89dd74c61103b7644ab2dd9d26606ea0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24752,6 +25068,65 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_MaxRayIntersections: 0
+--- !u!1 &2009040360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2009040361}
+  - component: {fileID: 2009040363}
+  - component: {fileID: 2009040362}
+  m_Layer: 0
+  m_Name: RevealTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2009040361
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009040360}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.38449997, y: -0.12079998, z: 0.4373}
+  m_LocalScale: {x: 0.10000002, y: 0.10000002, z: 0.057570003}
+  m_Children: []
+  m_Father: {fileID: 1480286030}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2009040362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009040360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a5b5e254ed2ce1458cb1add30314daf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraMover: {fileID: 0}
+  moveToPos: 0
+--- !u!65 &2009040363
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009040360}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.7, y: 0.7, z: 0.7}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2010873550
 GameObject:
   m_ObjectHideFlags: 0

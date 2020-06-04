@@ -36,6 +36,7 @@ public class MoveTrigger : MonoBehaviour, IPointerClickHandler
                     UICG.interactable = false;
                     GameObject.Find("_GM").GetComponent<EnableColliders>().EnableTaggedColliders();
                     GetComponent<BoxCollider>().enabled = false;
+                    GameObject.Find("Notepad").GetComponent<BoxCollider>().enabled = true;
                 }
             }
             else
