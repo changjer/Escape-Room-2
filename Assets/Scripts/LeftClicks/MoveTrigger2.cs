@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using System.Diagnostics;
+using Debug = UnityEngine.Debug;
 
 public class MoveTrigger2 : MonoBehaviour, IPointerClickHandler
     {
@@ -20,6 +22,8 @@ public class MoveTrigger2 : MonoBehaviour, IPointerClickHandler
                 var BCG = GameObject.Find("BackButton").GetComponent<CanvasGroup>();
                 var BCG2 = GameObject.Find("BackButton2").GetComponent<CanvasGroup>();
                 var CIF = GameObject.Find("ComputerInputField").GetComponent<CanvasGroup>();
+                var NP = GameObject.Find("Notepad").GetComponent<BoxCollider>();
+
 
                 GameObject.Find("Back2").GetComponent<MyGUI>().MoveBackTo2 = CameraMover.CurrentIndex;
 
@@ -35,6 +39,8 @@ public class MoveTrigger2 : MonoBehaviour, IPointerClickHandler
                 CIF.alpha = 0;
                 CIF.interactable = false;
                 CIF.blocksRaycasts = false;
+                GameObject.Find("Notepad").GetComponent<BoxCollider>().enabled = true;
+
             }
             else
                 {
