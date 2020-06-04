@@ -6,15 +6,15 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
-
+using UnityEngine.Events;
 public class UnhidePanelDoor : MonoBehaviour
 {
     public GameObject userInput;
     //public GameObject verificationMessage;
     private string enteredPW;
-   // public string wrongPasswordMessage;
-   // public string correctPasswordMessage;
-
+    // public string wrongPasswordMessage;
+    // public string correctPasswordMessage;
+    public UnityEvent Pass;
     bool unhideOnce = false;
 
     public void Unhide(GameObject obj)
@@ -27,6 +27,7 @@ public class UnhidePanelDoor : MonoBehaviour
             {
                 obj.SetActive(true);
                 unhideOnce = true;
+                Pass.Invoke();
             }
         }
 

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class Lamp : MonoBehaviour {
 
     [HideInInspector]
@@ -14,14 +14,19 @@ public class Lamp : MonoBehaviour {
     public GameObject DomeOn;
 
     public bool TurnOn;
-
-    public GameObject inventory;
+    public UnityEvent On;
+    public Inventory inventory;
    
 	void OnMouseOver()
     {
-        if(Input.GetMouseButtonDown(0) && inventory.gameObject.GetComponent<Inventory>().InInventory("Key 3"))
+        if(Input.GetMouseButtonDown(0) && inventory.ActiveItem=="Light Bulb")
         {
+
             TurnOn = !TurnOn;
+       
+                On.Invoke();
+   
+            inventory.RemoveItem(inventory.ActiveItemIndex);
         }
     }
 	// Update is called once per frame
