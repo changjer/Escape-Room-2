@@ -3,7 +3,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
+
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
@@ -84,7 +84,7 @@ public class DialogueManager : MonoBehaviour
                 DialogueBeep.Invoke();
                 }
                 dialogueText.text += character;
-                for (int i = 0; i < 30; i++)
+                for (int i = 0; i <12; i++)
                     {
                     yield return null;
                     }
@@ -118,6 +118,7 @@ public class DialogueManager : MonoBehaviour
         }
         else if (isZoomed2)
             {
+
             BCG2.alpha = 1;
             BCG2.interactable = true;
             UICG.alpha = 0;
@@ -159,6 +160,7 @@ public class DialogueManager : MonoBehaviour
         }
         else if (BCG2.interactable==true)
             {
+            
             isZoomed2 = true;
             UICG.alpha = 0;
             UICG.interactable = false;
@@ -171,6 +173,7 @@ public class DialogueManager : MonoBehaviour
         else
             {
             isZoomed = false;
+            isZoomed2 = false;
             UICG.alpha = 0;
             UICG.interactable = false;
             BCG.alpha = 0;

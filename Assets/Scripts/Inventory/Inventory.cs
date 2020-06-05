@@ -122,10 +122,9 @@ public class Inventory : MonoBehaviour
     }
     public void RemoveItem(int index)
     {
-        if (index == ActiveItemIndex)
-            {
+
             DeselectItem();
-            }
+            
         inventorySlot[index] = inventoryPanel.transform.GetChild(index).gameObject;
         inventorySlot[index].GetComponent<DialogueTrigger>().DialogNum = -2;
         inventoryImage[index].sprite = Background;
@@ -138,18 +137,20 @@ public class Inventory : MonoBehaviour
         var name2 = inventorySlot[ActiveItemIndex].GetComponent<InventoryItem>().name;
         if ((name1 == "Hook" && name2 == "Dowel" )||( name1 == "Dowel" && name2 == "Hook"))
             {
-            RemoveItem(index);
             RemoveItem(ActiveItemIndex);
+            RemoveItem(index);
+            
            
             AddItem(CombinedItems[0]);
             }
         if ((name1 == "Cloth Scrap 1" && name2 == "Cloth Scrap 2") || (name1 == "Cloth Scrap 2" && name2 == "Cloth Scrap 1"))
             {
-            RemoveItem(index);
+            
             RemoveItem(ActiveItemIndex);
-
+            RemoveItem(index);
             AddItem(CombinedItems[4]);
             }
+        
         }
     public void SelectItem(int index)
         {

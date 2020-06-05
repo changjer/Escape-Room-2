@@ -2657,8 +2657,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
+  m_Radius: 2
+  m_Height: 2.41
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &263303959
@@ -2716,7 +2716,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263303957}
   m_LocalRotation: {x: -0.6959681, y: -0, z: -0, w: 0.7180728}
-  m_LocalPosition: {x: 4.73, y: 1.79, z: -41.84}
+  m_LocalPosition: {x: 15.62, y: 1.79, z: -41.84}
   m_LocalScale: {x: 0.12282178, y: 0.9377, z: 0.12282178}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2774,7 +2774,8 @@ MonoBehaviour:
   dialogue:
   - name: Player
     sentences:
-    - Look a Pencil. What can I do with it?
+    - A pencil.
+    - Maybe this will point me in the right direction.
   DialogNum: 0
 --- !u!1 &267578414
 GameObject:
@@ -3683,7 +3684,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 45982b85d92d18942ac3f0d0e36f24a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4041,7 +4042,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398293857}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -4873,9 +4874,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - name: 
+  - name: Player
     sentences:
-    - ...Something looks out of place
+    - A bed.
+    - I'd love to nap but now is not the time.
   DialogNum: 0
 --- !u!114 &508162875
 MonoBehaviour:
@@ -5080,7 +5082,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.9, z: 0.8}
-  m_Center: {x: -0.1, y: 0, z: 0}
+  m_Center: {x: -0.1, y: 0.47, z: 0}
 --- !u!114 &525763486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5095,6 +5097,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CameraMover: {fileID: 1998097177}
   moveToPos: 14
+--- !u!114 &525763488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525763484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecca1270e79b40b8bf22087cf2603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - name: Player
+    sentences:
+    - A desk with a computer and stuff on it.
+  DialogNum: 0
 --- !u!1 &527454800
 GameObject:
   m_ObjectHideFlags: 0
@@ -5666,6 +5685,7 @@ GameObject:
   - component: {fileID: 590976847}
   - component: {fileID: 590976846}
   - component: {fileID: 590976845}
+  - component: {fileID: 590976848}
   m_Layer: 0
   m_Name: NotepadWriting
   m_TagString: Untagged
@@ -5748,6 +5768,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 590976843}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &590976848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590976843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecca1270e79b40b8bf22087cf2603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - name: Player
+    sentences:
+    - Looks like someone wrote 3629 here before erasing it.
+  DialogNum: 0
 --- !u!1 &593936927
 GameObject:
   m_ObjectHideFlags: 0
@@ -5927,6 +5964,85 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &611262405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 611262408}
+  - component: {fileID: 611262407}
+  - component: {fileID: 611262406}
+  - component: {fileID: 611262409}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Zoomable2
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &611262406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611262405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0df1acd02c315bf4aa599ca798f824d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CameraMover: {fileID: 1998097177}
+  moveToPos: 20
+--- !u!65 &611262407
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611262405}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.86, y: 1.51, z: 3.26}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &611262408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611262405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.6, y: 1.49, z: -42.26}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1654283677}
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &611262409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611262405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecca1270e79b40b8bf22087cf2603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - name: Player
+    sentences:
+    - A notepad.
+    - I should get a closer look.
+  DialogNum: 0
 --- !u!1 &612596532
 GameObject:
   m_ObjectHideFlags: 0
@@ -11910,6 +12026,7 @@ GameObject:
   - component: {fileID: 684973359}
   - component: {fileID: 684973358}
   - component: {fileID: 684973357}
+  - component: {fileID: 684973360}
   m_Layer: 0
   m_Name: Sink Area
   m_TagString: Zoomable
@@ -11928,7 +12045,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 7.99, y: 6.97, z: 6.03}
+  m_Size: {x: 7.99, y: 6.97, z: 7.02}
   m_Center: {x: 0, y: 0.91, z: 0}
 --- !u!114 &684973358
 MonoBehaviour:
@@ -11960,6 +12077,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &684973360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684973356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecca1270e79b40b8bf22087cf2603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - name: Player
+    sentences:
+    - A sink with a mirror above it.
+  DialogNum: 0
 --- !u!1 &689246929
 GameObject:
   m_ObjectHideFlags: 0
@@ -14495,7 +14629,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 897338122}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -14653,7 +14787,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925037976}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -14700,11 +14834,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 925037976}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -24.129, y: 3.97, z: -39.21}
+  m_LocalPosition: {x: -24.18, y: 3.97, z: -39.21}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 622858535}
   - {fileID: 2077418029}
+  - {fileID: 1960912936}
   m_Father: {fileID: 0}
   m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
@@ -17676,6 +17811,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CameraMover: {fileID: 1998097177}
   moveToPos: 10
+--- !u!114 &1297757154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297757148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecca1270e79b40b8bf22087cf2603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - name: Player
+    sentences:
+    - A bathtub.
+  DialogNum: 0
 --- !u!1 &1300406953
 GameObject:
   m_ObjectHideFlags: 0
@@ -17834,7 +17986,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1354082532}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -17844,7 +17996,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 45982b85d92d18942ac3f0d0e36f24a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18585,6 +18737,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CameraMover: {fileID: 1998097177}
   moveToPos: 9
+--- !u!114 &1432096346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432096340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecca1270e79b40b8bf22087cf2603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - name: Player
+    sentences:
+    - Its a toilet.
+    - Have you not seen one of these before?
+  DialogNum: 0
 --- !u!1001 &1437595309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19774,7 +19944,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
+  m_Radius: 1
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
@@ -19861,13 +20031,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 585037719cf0a6244b12e34364b1ca4b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.216
+  m_Volume: 0.117
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 115
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -19905,7 +20075,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -20466,10 +20636,9 @@ GameObject:
   - component: {fileID: 1654283674}
   - component: {fileID: 1654283679}
   - component: {fileID: 1654283678}
-  - component: {fileID: 1654283680}
   m_Layer: 0
   m_Name: Notepad
-  m_TagString: InventoryItem
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 64
@@ -20541,16 +20710,16 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1654283673}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.74, y: 1.84, z: -41.94}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.13999987, y: 0.35000002, z: 0.3199997}
   m_LocalScale: {x: 1.0939, y: 0.32832, z: 2.0746}
   m_Children:
   - {fileID: 894743139}
   - {fileID: 727315825}
   - {fileID: 1480286030}
   - {fileID: 590976844}
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 611262408}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1654283678
 MonoBehaviour:
@@ -20568,8 +20737,8 @@ MonoBehaviour:
   Reveal:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1654283679}
-        m_MethodName: SetDialogue
+      - m_Target: {fileID: 0}
+        m_MethodName: 
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20578,7 +20747,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 0
       - m_Target: {fileID: 727315826}
         m_MethodName: TriggerDialogue
         m_Mode: 1
@@ -20622,20 +20791,6 @@ MonoBehaviour:
     sentences:
     - 'It looks like something was written here before. '
   DialogNum: 0
---- !u!114 &1654283680
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1654283673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0df1acd02c315bf4aa599ca798f824d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CameraMover: {fileID: 1998097177}
-  moveToPos: 20
 --- !u!1 &1662808794
 GameObject:
   m_ObjectHideFlags: 0
@@ -20857,7 +21012,7 @@ MonoBehaviour:
   dialogue:
   - name: 
     sentences:
-    - Let's see if we can open this nightstand.
+    - A nightstand with a safe and a lamp on it.
   DialogNum: 0
 --- !u!1 &1674788595
 GameObject:
@@ -23690,7 +23845,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 45982b85d92d18942ac3f0d0e36f24a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24539,6 +24694,55 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1939801558}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1960912935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1960912936}
+  - component: {fileID: 1960912937}
+  m_Layer: 0
+  m_Name: PassDialogue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1960912936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960912935}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 925037980}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1960912937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960912935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecca1270e79b40b8bf22087cf2603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - name: Player
+    sentences:
+    - I heard a click.
+    - Did the door unlock?
+  DialogNum: 0
 --- !u!1 &1961672103
 GameObject:
   m_ObjectHideFlags: 0
@@ -25452,6 +25656,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 1139259528166848, guid: c4abc6cb5b1190944b015a26db4d66a8, type: 3}
+      propertyPath: m_TagString
+      value: Zoomable
+      objectReference: {fileID: 0}
     - target: {fileID: 1310335836663994, guid: c4abc6cb5b1190944b015a26db4d66a8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 64
@@ -25717,6 +25925,28 @@ MonoBehaviour:
       - m_Target: {fileID: 612596536}
         m_MethodName: set_enabled
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1960912937}
+        m_MethodName: TriggerDialogue
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 735029342}
+        m_MethodName: playUnlock
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -25998,6 +26228,7 @@ GameObject:
   - component: {fileID: 2118488840}
   - component: {fileID: 2118488839}
   - component: {fileID: 2118488838}
+  - component: {fileID: 2118488841}
   m_Layer: 0
   m_Name: SinkCupboard (1)
   m_TagString: Zoomable
@@ -26048,6 +26279,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &2118488841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118488837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecca1270e79b40b8bf22087cf2603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - name: Player
+    sentences:
+    - A bathroom cupboard.
+  DialogNum: 0
 --- !u!1 &2118639639
 GameObject:
   m_ObjectHideFlags: 0
@@ -26619,6 +26867,7 @@ GameObject:
   - component: {fileID: 5006512735435254032}
   - component: {fileID: 2106006141}
   - component: {fileID: 8296172668554615556}
+  - component: {fileID: 8296172668554615557}
   m_Layer: 0
   m_Name: SinkCupboard
   m_TagString: Zoomable
@@ -26640,6 +26889,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CameraMover: {fileID: 1998097177}
   moveToPos: 11
+--- !u!114 &8296172668554615557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668554615555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecca1270e79b40b8bf22087cf2603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+  - name: Player
+    sentences:
+    - A cupboard under the sink.
+  DialogNum: 0
 --- !u!33 &8321614793899231536
 MeshFilter:
   m_ObjectHideFlags: 0
