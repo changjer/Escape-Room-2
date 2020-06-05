@@ -13,7 +13,7 @@ public class LockedScript : MonoBehaviour
     public GameObject dialogue;
     
 
-    public void changeCombo(int slot, int change)
+    public void changeCombo(int slot, int change)//moves the cylinders and changes the value of the combination
         {
       
         combination[slot] += change*-1;
@@ -28,7 +28,7 @@ public class LockedScript : MonoBehaviour
         Cylinders[slot].transform.localEulerAngles += new Vector3(0,36*change*-1,0);
         
         }
-    public void CheckCombo()
+    public void CheckCombo()//checks the combination to see if it is correct and calls the unlock event and plays dialogue if it is
         {
         for (int i = 0; i < 4; i++)
             {
@@ -40,7 +40,7 @@ public class LockedScript : MonoBehaviour
         dialogue.GetComponent<DialogueTrigger>().TriggerDialogue();
         Unlock.Invoke();
         }
-    public void ResetLock()
+    public void ResetLock()//resets the cylinders and the combination to 0
         {
         Reset.Invoke();
         foreach (GameObject cylinder in Cylinders)
